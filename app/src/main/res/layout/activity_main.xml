@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/veriTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veri"
+        android:textSize="25sp"
+        android:fontFamily="casual"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="25dp"/>
+
+    <EditText
+        android:id="@+id/girilenVeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Veri Giriniz..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingEnd="25dp"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/veriTxt"
+        app:layout_constraintBottom_toBottomOf="@id/veriTxt"
+        android:layout_marginStart="20dp"/>
+
+
+    <Button
+        android:id="@+id/clickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tıkla"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/girilenVeri"
+        app:layout_constraintBottom_toBottomOf="@id/girilenVeri"
+        android:layout_marginStart="20dp"
+        />
+
+    <View
+        android:id="@+id/viewDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/veriTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/veriTxt"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider1"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ToggleButton
+        android:id="@+id/toggleBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="KAPALI"
+        android:textOn="AÇIK"
+        app:layout_constraintStart_toStartOf="@id/girilenVeri"
+        app:layout_constraintTop_toTopOf="@id/switch1"/>
+
+    <Button
+        android:id="@+id/click1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tıkla"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/clickBtn"
+        app:layout_constraintTop_toTopOf="@id/toggleBtn1"/>
+
+    <View
+        android:id="@+id/viewDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/click1Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/bilinenDiller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dilleri seç"
+        android:textSize="25sp"
+        android:fontFamily="casual"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider2"
+        app:layout_constraintStart_toStartOf="@id/switch1"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/bilinenDiller"
+        app:layout_constraintTop_toTopOf="@id/bilinenDiller"
+        android:layout_marginStart="20dp"/>
+
+
+    <CheckBox
+        android:id="@+id/checkBpxKotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kotlin"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/checkBoxJava"
+        app:layout_constraintTop_toTopOf="@id/checkBoxJava"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/takimTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="takim seç"
+        android:textSize="25sp"
+        android:fontFamily="casual"
+        app:layout_constraintStart_toStartOf="@id/bilinenDiller"
+        app:layout_constraintTop_toBottomOf="@id/bilinenDiller"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGrup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/takimTxt"
+        app:layout_constraintStart_toEndOf="@id/takimTxt"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/fbRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fb" />
+
+        <RadioButton
+            android:id="@+id/gsRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gs" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/click3Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tıkla"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/click1Btn"
+        app:layout_constraintTop_toTopOf="@id/radioGrup"
+        android:layout_marginStart="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/takimTxt"
+        app:layout_constraintStart_toStartOf="@id/takimTxt"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnBasla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Başla"
+        app:layout_constraintStart_toEndOf="@id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/btnDur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dur"
+        app:layout_constraintStart_toEndOf="@id/btnBasla"
+        app:layout_constraintTop_toTopOf="@id/btnBasla"
+        android:layout_marginStart="20dp"/>
+
+    <SeekBar
+        android:id="@+id/sliderBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/progressBar"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/sliderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="slider"
+        app:layout_constraintTop_toTopOf="@id/sliderBar"
+        app:layout_constraintStart_toEndOf="@id/sliderBar"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.01"
+        app:layout_constraintStart_toStartOf="@id/sliderBar"
+        app:layout_constraintTop_toBottomOf="@id/sliderBar"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnGoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Göster"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnGec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GEÇ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
